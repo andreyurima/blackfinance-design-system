@@ -1,6 +1,6 @@
 from conversa import limpar_texto, montar_mensagens
 
-BOT = "UBOT"
+BOT = "UOWL"
 NOMES = {"UANDRE": "André", "UGAB": "Gabriel"}
 
 
@@ -8,17 +8,17 @@ def nome_de(user_id):
     return NOMES.get(user_id, user_id)
 
 
-def test_tira_mencao_ao_agente_e_nomeia_as_outras():
-    texto = limpar_texto("<@UBOT> pergunta pro <@UGAB>", BOT, nome_de)
+def test_tira_mencao_ao_owl_e_nomeia_as_outras():
+    texto = limpar_texto("<@UOWL> pergunta pro <@UGAB>", BOT, nome_de)
     assert texto == "pergunta pro @Gabriel"
 
 
 def test_thread_vira_turnos_alternados():
     replies = [
-        {"user": "UANDRE", "text": "<@UBOT> oi"},
+        {"user": "UANDRE", "text": "<@UOWL> oi"},
         {"user": BOT, "bot_id": "B1", "text": "Oi, André!"},
         {"user": "UGAB", "text": "eu também"},
-        {"user": "UANDRE", "text": "<@UBOT> resume"},
+        {"user": "UANDRE", "text": "<@UOWL> resume"},
     ]
     assert montar_mensagens(replies, BOT, nome_de) == [
         {"role": "user", "content": "André: oi"},
@@ -30,15 +30,15 @@ def test_thread_vira_turnos_alternados():
 def test_ignora_entrada_no_canal_e_mencao_vazia():
     replies = [
         {"user": "UGAB", "subtype": "channel_join", "text": "entrou"},
-        {"user": "UANDRE", "text": "<@UBOT>"},
+        {"user": "UANDRE", "text": "<@UOWL>"},
     ]
     assert montar_mensagens(replies, BOT, nome_de) == []
 
 
-def test_nao_comeca_nem_termina_com_o_agente():
+def test_nao_comeca_nem_termina_com_o_owl():
     replies = [
         {"user": BOT, "text": "Bom dia!"},
-        {"user": "UANDRE", "text": "<@UBOT> e aí"},
+        {"user": "UANDRE", "text": "<@UOWL> e aí"},
         {"user": BOT, "text": "Respondido."},
     ]
     assert montar_mensagens(replies, BOT, nome_de) == [

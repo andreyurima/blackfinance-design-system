@@ -1,6 +1,6 @@
 display_information:
-  name: Black Finance
-  description: Agente do Black Finance
+  name: Owl
+  description: A coruja do Black Finance
   background_color: "#06231D"
 features:
   app_home:
@@ -8,7 +8,7 @@ features:
     messages_tab_enabled: true
     messages_tab_read_only_enabled: false
   bot_user:
-    display_name: Black Finance
+    display_name: Owl
     always_online: true
 oauth_config:
   scopes:

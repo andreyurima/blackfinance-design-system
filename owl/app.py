@@ -1,4 +1,4 @@
-"""Agente do Black Finance no Slack (Socket Mode)."""
+"""Owl, a coruja do Black Finance no Slack (Socket Mode)."""
 
 import logging
 import os
@@ -14,8 +14,8 @@ from conversa import montar_mensagens
 PASTA = Path(__file__).parent
 load_dotenv(PASTA / ".env")
 
-MODELO = os.environ.get("AGENTE_MODELO", "claude-opus-5-5")
-ESFORCO = os.environ.get("AGENTE_ESFORCO", "medium")
+MODELO = os.environ.get("OWL_MODELO", "claude-opus-5-5")
+ESFORCO = os.environ.get("OWL_ESFORCO", "medium")
 PROMPT = (PASTA / "prompt.md").read_text(encoding="utf-8")
 
 logging.basicConfig(level=logging.INFO)

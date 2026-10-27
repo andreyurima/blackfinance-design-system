@@ -6,7 +6,7 @@ MENCAO = re.compile(r"<@([UW][A-Z0-9]+)>")
 
 
 def limpar_texto(texto, bot_user_id, nome_de):
-    """Tira a menção ao agente e troca as outras menções pelo nome da pessoa."""
+    """Tira a menção ao Owl e troca as outras menções pelo nome da pessoa."""
     texto = texto.replace(f"<@{bot_user_id}>", "")
     texto = MENCAO.sub(lambda m: "@" + nome_de(m.group(1)), texto)
     return texto.strip()
@@ -15,7 +15,7 @@ def limpar_texto(texto, bot_user_id, nome_de):
 def montar_mensagens(replies, bot_user_id, nome_de):
     """Converte as mensagens da thread em turnos user/assistant alternados.
 
-    O que o agente escreveu vira assistant; o resto vira user, com o nome de quem
+    O que o Owl escreveu vira assistant; o resto vira user, com o nome de quem
     escreveu na frente. Turnos seguidos do mesmo papel são juntados.
     """
     turnos = []

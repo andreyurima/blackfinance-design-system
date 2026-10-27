@@ -1,11 +1,11 @@
 # Black Finance
 
-Repositório do Black Finance: o site, o agente do Slack (blackfinance.slack.com) e o design system.
+Repositório do Black Finance: o site, o Owl, agente do BF no Slack (blackfinance.slack.com) e o design system.
 
 ## Pastas
 
 - `site/`: cópia do site black-finance-programa.vercel.app, baixada em 27/10/2026 (página inicial e `/institucional/`, com todas as fotos)
-- `agente/`: agente do BF no Slack, com o Claude (como ligar em `agente/README.md`)
+- `owl/`: Owl, a coruja do BF no Slack, com o Claude (como ligar em `owl/README.md`)
 - `design-system/`: cores, tipografia e componentes do BF
 
 ## Site
