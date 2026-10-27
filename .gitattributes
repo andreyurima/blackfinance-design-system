@@ -1,1 +1,4 @@
-cd /c/Users/andre/projetos/meu-primeiro-pr && git push -u origin main
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
