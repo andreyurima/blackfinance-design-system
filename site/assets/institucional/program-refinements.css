@@ -1,0 +1,7 @@
+/* Related brand cuts; keep the five-step journey quieter than the pillars. */
+[data-component="program-pillars"] .flex-1{position:relative;isolation:isolate;overflow:hidden;padding-bottom:56px;clip-path:polygon(0 0,calc(100% - 32px) 0,100% 32px,100% 100%,0 100%)}
+[data-component="program-pillars"] .flex-1:after{content:"";position:absolute;width:240px;height:240px;right:-164px;bottom:-128px;background:url('./brand/holofote-preenchido-escuro.webp') center/contain no-repeat;pointer-events:none;z-index:-1}
+[data-component="program-pillars"] .flex-1:nth-child(2):after{background-image:url('./brand/holofote-contorno-sage.webp')}
+[data-component="program-pillars"] .flex-1:nth-child(3):after{background-image:url('./brand/holofote-contorno-lima.webp')}
+.bf-journey-card{clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%)}
+@media(max-width:700px){[data-component="program-pillars"] .flex-1{padding-bottom:56px}}

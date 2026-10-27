@@ -5,3 +5,4 @@
 *.webp binary
 *.ttf binary
 *.bat text eol=crlf
+site/** -text
