@@ -1,11 +1,10 @@
 # Black Finance
 
-Repositório do Black Finance: o site, o design system e o Owl Know, agente do BF no Slack (blackfinance.slack.com).
+Repositório do Black Finance: o site e o design system.
 
 ## Pastas
 
 - `site/`: cópia do site black-finance-programa.vercel.app, baixada em 27/10/2026 (página inicial e `/institucional/`, com todas as fotos)
-- `owl/`: Owl Know, o agente do Slack (app A0BUTJ3B85N)
 - `design-system/`: cores, tipografia e componentes do BF
 
 ## Site

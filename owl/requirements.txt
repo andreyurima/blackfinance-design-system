@@ -1,4 +1,0 @@
-anthropic==2.3.0
-slack-bolt==1.30.0
-slack-sdk==3.45.0
-python-dotenv==1.2.4
